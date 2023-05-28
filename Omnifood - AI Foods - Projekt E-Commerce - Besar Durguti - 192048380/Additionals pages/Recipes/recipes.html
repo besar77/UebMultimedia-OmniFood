@@ -16,15 +16,81 @@
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     <link rel="stylesheet" href="../Recipes/style.css" />
     <link rel="stylesheet" href="../Recipes/general.css" />
     <link rel="stylesheet" href="queries.css">
 
     <script defer src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <style>
+      /* Add any custom styling for the slider */
+      .slider {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .slider-img{
+        height: 400px;
+        width: 1920px;
+      }
+ 
+      .slick-prev,
+    .slick-next {
+
+      width: 20px;
+      height: 40px;
+      /* background-color: #fff; */
+      color: #00ffff;
+      /* border: 1px solid #ccc; */
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    /* Add arrow icons */
+    .slick-prev:before,
+    .slick-next:before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+      transform: rotate(-45deg);
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+
+    .slick-prev:before{
+      transform: rotate(45deg);
+      width: 10px;
+    }
+
+    /* Remove default button content */
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow {
+      background: none;
+      color: transparent;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+    </style>
 
     <title>Recipes | Omnifood</title>
   </head>
   <body>
+
+
     <header class="header">
       <a href="../../index.html">
         <img class="logo" alt="Omnifood logo" src="../../img/omnifood-logo.png" />
@@ -54,6 +120,22 @@
     </header>
 
     <main>
+
+      
+    <div class="slider">
+      <!-- Add the slider container -->
+      <div>
+        <img class="slider-img" src="img/food-2.jpg" alt="Slide 1">
+      </div>
+      <div>
+        <img class="slider-img"  src="img/food-3.jpg" alt="Slide 2">
+      </div>
+      <div>
+        <img class="slider-img"  src="img/food-4.jpg" alt="Slide 3">
+      </div>
+    </div>
+
+
       <!-- Most popular -->
       <section class="section-meals container">
         <!-- Heading of Meals Section -->
@@ -417,5 +499,17 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script>
+    // Initialize the slider
+    $(document).ready(function(){
+      $('.slider').slick({
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+      });
+    });
+  </script>
   </body>
 </html>
