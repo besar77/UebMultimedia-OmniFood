@@ -24,66 +24,36 @@
 
     <script defer src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-    <style>
-      /* Add any custom styling for the slider */
-      .slider {
-        width: 80%;
-        margin: 0 auto;
-      }
-      .slider-img{
-        height: 400px;
-        width: 1920px;
-      }
- 
-      .slick-prev,
-    .slick-next {
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+   <style>
+   
+   .swiper{
+      width: 90%;
+      height: 500px;
+      /* margin-top: 100px; */
+      margin-bottom: 70px;
+      border-radius: 10px;
+      
+   }
 
-      width: 20px;
-      height: 40px;
-      /* background-color: #fff; */
-      color: #00ffff;
-      /* border: 1px solid #ccc; */
-      border-radius: 50%;
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
+   .swiper-slide img{
+    width: 100%;
+    transform: translateY(-150px);
+   }
+
+    .swiper .swiper-button-prev, .swiper .swiper-button-next{
+      color: #fff;
     }
 
-    /* Add arrow icons */
-    .slick-prev:before,
-    .slick-next:before {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-top: 2px solid #000;
-      border-right: 2px solid #000;
-      transform: rotate(-45deg);
-      margin-top: 15px;
-      margin-left: 15px;
+    .swiper .swiper-pagination-bullet-active{
+      background-color: #fff;
+      width: 12px;
+      height: 12px;
     }
 
-    .slick-prev:before{
-      transform: rotate(45deg);
-      width: 10px;
-    }
-
-    /* Remove default button content */
-    .slick-prev.slick-arrow,
-    .slick-next.slick-arrow {
-      background: none;
-      color: transparent;
-    }
-
-    .slick-prev {
-      left: 10px;
-    }
-
-    .slick-next {
-      right: 10px;
-    }
     </style>
 
     <title>Recipes | Omnifood</title>
@@ -91,7 +61,7 @@
   <body>
 
 
-    <header class="header">
+    <header class="header" >
       <a href="../../index.html">
         <img class="logo" alt="Omnifood logo" src="../../img/omnifood-logo.png" />
       </a>
@@ -122,18 +92,25 @@
     <main>
 
       
-    <div class="slider">
-      <!-- Add the slider container -->
-      <div>
-        <img class="slider-img" src="img/food-2.jpg" alt="Slide 1">
-      </div>
-      <div>
-        <img class="slider-img"  src="img/food-3.jpg" alt="Slide 2">
-      </div>
-      <div>
-        <img class="slider-img"  src="img/food-4.jpg" alt="Slide 3">
-      </div>
-    </div>
+      
+<div class="swiper">
+
+  <div class="swiper-wrapper">
+   
+    <div class="swiper-slide"><img src="img/food-2.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/food-3.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/food-4.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/food-4.jpg" alt=""></div>
+    ...
+  </div>
+ 
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+
+</div>
 
 
       <!-- Most popular -->
@@ -502,14 +479,32 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
-    // Initialize the slider
-    $(document).ready(function(){
-      $('.slider').slick({
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
-      });
-    });
+    const swiper = new Swiper('.swiper', {
+
+  direction: 'horizontal',
+
+      autoplay:{
+        delay:2000,
+        disableOnInteraction:false,
+      },
+
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+});
   </script>
   </body>
 </html>
