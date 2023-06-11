@@ -1,144 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/general.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/queries.css" />
-  <link rel="stylesheet" href="css/signin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/signin.css" />
 
-  <script defer src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 
-  <title>Omnifood</title>
-</head>
-<body>
+    <title>Omnifood</title>
+  </head>
+  <body>
     <header class="header">
-        <a href="index.html">
-          <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
-        </a>
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="index.html">Home</a></li>
-            <li>
-              <a
-                class="main-nav-link"
-                href="Additionals pages/Recipes/recipes.html"
-                >Recipes</a
-              >
-            </li>
-            <li>
-              <a class="main-nav-link" href="#testimonials">Testimonials</a>
-            </li>
-            <li><a class="main-nav-link" href="#pricing">Pricings</a></li>
-            <li><a class="main-nav-link nav-cta" href="/Additionals pages/LoginRegister/signIn.html">Sign in</a></li>
-          </ul>
-        </nav>
-  
-        <button class="btn-mobile-nav">
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-        </button>
-      </header>
+      <a href="index.html">
+        <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">Home</a></li>
+          <li>
+            <a
+              class="main-nav-link"
+              href="Additionals pages/Recipes/recipes.html"
+              >Recipes</a
+            >
+          </li>
 
+          <li><a class="main-nav-link" href="/aboutUs.html">About us</a></li>
+          <li>
+            <a class="main-nav-link nav-cta" href="/signIn.html">Sign in</a>
+          </li>
+        </ul>
+      </nav>
 
-      <body>
-        <div id="loader"></div>
-          <div class="container" style="margin-top: 10rem;">
-           
-            <h1 class="sign-header text-center">SIGN IN</h1>
-          
-          <div class="">
-            <div class=" d-flex justify-content-center mt-5 sign-lobby-container">  
-              <h1 id="login" class="sign-loby-header active">SIGN IN</h1>
-              <h1 id="create" class="sign-loby-header ">CREATE ACCOUNT</h1>
-            </div>
-            <div class="container-form-create-login">
-              <form action="" id="form-login" class="form ">
-                <input type="text" placeholder="EMAIL  ADRESS" class="input">
-                <input type="password" name="" id="" placeholder="PASSWORD" class="input">
-                <button class="sign-in">SIGN IN</button>
-              </form>
-              <form action="" id="form-create" class="form hidden">
-                <input type="text" placeholder="First Name" class="input" required>
-                <input type="text" name="" id="" placeholder="Last Name" class="input" required>
-                <input type="text" name="" id="" placeholder="Mobile Number" class="input" required>
-                <input type="email" name="" id="" placeholder="Email Address" class="input" required>
-                <input type="password" name="" id="" placeholder="Password" class="input" required>
-                <input type="password" name="" id="" placeholder="Confirm Password" class="input" required>
-                <button class="sign-in">Create Account</button>
-              </form>
-            </div>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <body>
+      <div id="loader"></div>
+      <div class="container" style="margin-top: 10rem">
+        <h1 class="sign-header text-center">SIGN IN</h1>
+
+        <div class="">
+          <div class="d-flex justify-content-center mt-5 sign-lobby-container">
+            <h1 id="login" class="sign-loby-header active">SIGN IN</h1>
+            <h1 id="create" class="sign-loby-header">CREATE ACCOUNT</h1>
+          </div>
+          <div class="container-form-create-login">
+            <form action="" id="form-login" class="form">
+              <input type="text" placeholder="EMAIL  ADRESS" class="input" />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="PASSWORD"
+                class="input"
+              />
+              <button class="sign-in">SIGN IN</button>
+            </form>
+            <form action="" id="form-create" class="form hidden">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="input"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Last Name"
+                class="input"
+                required
+              />
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Mobile Number"
+                class="input"
+                required
+              />
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Email Address"
+                class="input"
+                required
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Password"
+                class="input"
+                required
+              />
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Confirm Password"
+                class="input"
+                required
+              />
+              <button class="sign-in">Create Account</button>
+              <br /><br /><br /><br />
+            </form>
           </div>
         </div>
+      </div>
 
+      <script>
+        const btnSign = document.querySelector("#login");
+        const btnCreate = document.querySelector("#create");
+        const formLogin = document.querySelector("#form-login");
+        const formCreate = document.querySelector("#form-create");
+        const loader = document.querySelector("#loader");
+        const container = document.querySelector(
+          ".container-form-create-login"
+        );
 
+        btnCreate.addEventListener("click", function () {
+          btnCreate.classList.add("active");
+          btnSign.classList.remove("active");
 
-        <script>
-          const btnSign = document.querySelector('#login');
-          const btnCreate = document.querySelector('#create');
-          const formLogin = document.querySelector('#form-login');
-          const formCreate = document.querySelector('#form-create');
-          const loader = document.querySelector('#loader');
-          const container = document.querySelector('.container-form-create-login');
+          formLogin.classList.add("hidden");
+          formCreate.classList.remove("hidden");
 
+          loader.style.display = "block";
 
-          btnCreate.addEventListener('click', function() {
-            btnCreate.classList.add('active');
-            btnSign.classList.remove('active');
+          container.style.display = "none";
 
-            formLogin.classList.add('hidden');
-            formCreate.classList.remove('hidden');
+          setTimeout(function () {
+            loader.style.display = "none";
 
-            
-            loader.style.display = 'block';
+            container.style.display = "block";
+          }, 2000);
+        });
 
-            
-            container.style.display = 'none';
+        btnSign.addEventListener("click", function () {
+          btnCreate.classList.remove("active");
+          btnSign.classList.add("active");
 
-            
-            setTimeout(function() {
-             
-           
-              loader.style.display = 'none';
-              
-              container.style.display = 'block';
-            }, 2000); 
-          });
+          formLogin.classList.remove("hidden");
+          formCreate.classList.add("hidden");
 
-          btnSign.addEventListener('click', function() {
-            btnCreate.classList.remove('active');
-            btnSign.classList.add('active');
+          loader.style.display = "block";
 
-            formLogin.classList.remove('hidden');
-            formCreate.classList.add('hidden');
+          container.style.display = "none";
 
-          
-            loader.style.display = 'block';
+          setTimeout(function () {
+            loader.style.display = "none";
 
-            
-            container.style.display = 'none';
-
-           
-            setTimeout(function() {
-              
-             
-              loader.style.display = 'none';
-              
-              container.style.display = 'block';
-            }, 2000); 
-          });
-
-        </script>
-      </body>
-</body>
+            container.style.display = "block";
+          }, 2000);
+        });
+      </script>
+    </body>
+  </body>
 </html>
