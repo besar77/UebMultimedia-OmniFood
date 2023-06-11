@@ -76,54 +76,23 @@
         height: 100%;
         /* object-fit: cover; */
       }
-      /* .loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
+
+      .logo-hover:hover {
+        transform: rotate(5deg); /* Use 'deg' instead of 'px' for rotation */
       }
 
-      .loader.loaded {
-        opacity: 0;
-        pointer-events: none;
+      /* CSS code for hover effect */
+      .hero-img-box {
+        perspective: 1000px;
       }
 
-      .loader:before {
-        content: "";
-        width: 50px;
-        height: 50px;
-        border: 4px solid #ffffff;
-        border-top-color: transparent;
-        border-radius: 50%;
-        animation: loader-rotate 1s linear infinite;
+      .hero-img {
+        transition: transform 0.5s;
       }
 
-      @keyframes loader-rotate {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      .hero-img:hover {
+        transform: rotateY(180deg);
       }
-
-
-      .content {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-
-      .content.loaded {
-        opacity: 1;
-      } */
     </style>
   </head>
   <body>
@@ -140,8 +109,12 @@
 
     <div class="content">
       <header class="header">
-        <a href="#">
-          <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+        <a href="#" class="logo-hover">
+          <img
+            class="logo logo-hover"
+            alt="Omnifood logo"
+            src="img/omnifood-logo.png"
+          />
         </a>
         <nav class="main-nav">
           <ul class="main-nav-list">
@@ -921,7 +894,7 @@
         setTimeout(function () {
           loader.classList.add("loaded");
           content.classList.add("loaded");
-        }, 5700);
+        }, 0);
       });
     </script>
   </body>
