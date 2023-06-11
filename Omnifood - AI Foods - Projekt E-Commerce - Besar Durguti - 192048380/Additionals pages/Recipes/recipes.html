@@ -54,6 +54,53 @@
       height: 12px;
     }
 
+    .recipes-meal {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 0.8s;
+}
+
+.recipes-meal.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.recipes-meal:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.recipes-meal:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.recipes-meal:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.recipes-meal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.recipes-meal:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.recipes-meal:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.recipes-meal:nth-child(7) {
+  transition-delay: 0.3s;
+}
+
+.recipes-meal:nth-child(8) {
+  transition-delay: 0.4s;
+}
+
+.recipes-meal:nth-child(9) {
+  transition-delay: 0.5s;
+}
+
     </style>
 
     <title>Recipes | Omnifood</title>
@@ -116,7 +163,7 @@
       <section class="section-meals container">
         <!-- Heading of Meals Section -->
 
-        <div class="heading-section">
+        <div class="heading-section" style="margin-top: 120px;">
           <h1 class="heading-primary">Most Popular</h1>
           <p class="heading-description">
             Try these first if you're new to OmniFood.
@@ -503,6 +550,45 @@
   },
 
 
+});
+
+// function isElementInViewport(el) {
+//   var rect = el.getBoundingClientRect();
+//   return (
+//     rect.top >= 0 &&
+//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+//   );
+// }
+
+// function handleScrollAnimation() {
+//   var mealSections = document.querySelectorAll('.recipes-meal');
+
+//   mealSections.forEach(function (section) {
+//     if (isElementInViewport(section)) {
+//       section.classList.add('is-visible');
+//     }
+//   });
+// }
+
+// window.addEventListener('scroll', handleScrollAnimation);
+function handleScrollAnimation(entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+var mealSections = document.querySelectorAll('.recipes-meal');
+
+var observer = new IntersectionObserver(handleScrollAnimation, {
+  root: null,
+  threshold: 0.2 // Adjust the threshold value as needed
+});
+
+mealSections.forEach(function (section) {
+  observer.observe(section);
 });
   </script>
   </body>
