@@ -31,27 +31,25 @@
       }
 
       .container {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+          transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
 
-.container.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+      .container.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var containers = document.querySelectorAll(".container");
 
-  document.addEventListener('DOMContentLoaded', function() {
-  var containers = document.querySelectorAll('.container');
-
-  containers.forEach(function(container) {
-    container.classList.add('show');
-  });
-});
-</script>
+        containers.forEach(function (container) {
+          container.classList.add("show");
+        });
+      });
     </script>
   </head>
   <body>
@@ -85,9 +83,6 @@
     </header>
 
     <main>
-      <body>
-        
-      
       <section class="section-meal container">
         <div class="back">
           <a class="back-to-recipes" href="../../Recipes/recipes.html"
@@ -226,5 +221,4 @@
       </nav>
     </div>
   </footer>
-
 </html>

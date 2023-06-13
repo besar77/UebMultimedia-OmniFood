@@ -134,7 +134,22 @@
               <a class="main-nav-link" href="#testimonials">Testimonials</a>
             </li>
             <li><a class="main-nav-link" href="aboutUs.html">About us</a></li>
-            <li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+              "
+            >
+              <a
+                class="main-nav-link"
+                href="menuCart.html"
+                style="font-size: 30px; color: black"
+              >
+                <ion-icon name="bag-outline"></ion-icon>
+              </a>
+
               <a class="main-nav-link nav-cta" href="signIn.html">Sign in</a>
             </li>
           </ul>
@@ -898,7 +913,7 @@
         setTimeout(function () {
           loader.classList.add("loaded");
           content.classList.add("loaded");
-        }, 0);
+        }, 5000);
       });
     </script>
   </body>

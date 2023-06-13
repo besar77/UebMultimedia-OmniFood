@@ -1,271 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/general.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/queries.css" />
-  <link rel="stylesheet" href="css/signin.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  
-  <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/signin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-  <title>Omnifood</title>
+    <script defer src="js/script.js"></script>
 
-  <style>
+    <title>Omnifood</title>
 
-@keyframes colorChange {
-  0% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: grey;
-  }
-}
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
-body {
-  background-color: transparent;
-  transition: background-color 1s;
-    }
+      @keyframes colorChange {
+        0% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: grey;
+        }
+      }
 
-    body.color-animation {
-  background-color: grey;
-}
+      body {
+        background-color: transparent;
+        transition: background-color 1s;
+      }
 
-    .serivecs-div{
-      border-bottom: 2px solid black;
-      padding: 1rem;
-    }
+      body.color-animation {
+        background-color: grey;
+      }
 
-    .services-list{
-      display: flex;
-      flex-direction: column;
-      gap: 5rem;
-      margin-top: 10rem;
+      .serivecs-div {
+        border-bottom: 2px solid black;
+        padding: 1rem;
+      }
 
-    }
-
-    .services-icon{
-      font-size: 3rem;
-      color: black;
-      
-      padding: 1rem;
-      margin-right: 20px;
-    }
-
-    .services-a{
-      font-family: sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 3.8rem;
-      line-height: 4.8rem;
-      /* color: #f9f9f9; */
-      color: black;
-      text-decoration: none;
-      /* border-bottom: 2px solid black; */
-      padding: 10px;
-
-      transition: all 0.3s;
-    }
-
-    .services-a:hover{
-      color: #f18322;
-    }
-
-    .container-services{
-      margin-top: 30rem;
-      margin-bottom: 15rem;
-    }
-
-    .serivces-header{
-      font-family: sans-serif;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 4.7rem;
-      line-height: 4.8rem;
-      /* color: #f9f9f9; */
-      color: black;
-    }
-
-    .container-main-aboutis-last-section{
-      margin-top: 5rem;
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-    }
-
-    .who-we-are-header{
-      font-family: sans-serif;
-      font-weight: 500;
-      font-size: 2.4rem;
-      line-height: 3.4rem;
-      color: #12151b;
-      margin-bottom: 2rem;
-    }
-
-    .fadein-who-we-are{
-      font-family: sans-serif;
-      font-weight: 400;
-      font-size: 2.2rem;
-      line-height: 2.9rem;
-      color: #7a7e83;
-    }
-
-    .container-header-aboutus{
-        /* background-color: #333; */
-      color: #f18322;
-      margin-top: 3rem;
-     
-      padding: 20px;
-      text-align: center;
-      /* border-bottom: 1px solid rgb(224, 220, 220); */
-    }
-
-    .header-primary-aboutus{
-        font-size: 42px;
-      font-weight: 600;
-    }
-    
-    .container-main-aboutus{
+      .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
         margin-top: 10rem;
-        padding: 20px; 
-    }
+      }
 
-    .container-main-aboutus p{
-        
+      .services-icon {
+        font-size: 3rem;
+        color: black;
+
+        padding: 1rem;
+        margin-right: 20px;
+      }
+
+      .services-a {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.8rem;
+        line-height: 4.8rem;
+        /* color: #f9f9f9; */
+        color: black;
+        text-decoration: none;
+        /* border-bottom: 2px solid black; */
+        padding: 10px;
+
+        transition: all 0.3s;
+      }
+
+      .services-a:hover {
+        color: white;
+      }
+
+      .container-services {
+        margin-top: 30rem;
+        margin-bottom: 15rem;
+      }
+
+      .serivces-header {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.7rem;
+        line-height: 4.8rem;
+        /* color: #f9f9f9; */
+        color: black;
+      }
+
+      .container-main-aboutis-last-section {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .who-we-are-header {
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        color: #12151b;
+        margin-bottom: 2rem;
+      }
+
+      .fadein-who-we-are {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 2.9rem;
+        color: #7a7e83;
+      }
+
+      .container-header-aboutus {
+        /* background-color: #333; */
+        color: white;
+        margin-top: 10rem;
+
+        padding: 20px;
+        text-align: center;
+        /* border-bottom: 1px solid rgb(224, 220, 220); */
+      }
+
+      .header-primary-aboutus {
+        font-size: 42px;
+        font-weight: 400;
+      }
+
+      .container-main-aboutus {
+        margin-top: 10rem;
+        padding: 20px;
+      }
+
+      .container-main-aboutus p {
         line-height: 1.6;
-    }
+      }
 
-    
+      body {
+        background-color: #fdf2e9;
+      }
 
-body{
-    background-color: #FDF2E9;
-}
-
-    .h2-aboutus{
+      .h2-aboutus {
         text-align: center;
         font-size: 3.6rem;
         color: #ec7b18;
-    }
+      }
 
-    .container-video-aboutus{
+      .container-video-aboutus {
         margin-top: 50px;
-    }
+      }
 
-    #video-aboutus{
+      #video-aboutus {
         /* margin-top: 30rem; */
         width: 700px;
         margin: 0 220px;
         border-radius: 10px;
-    }
+      }
 
-  </style>
-</head>
-<body>
-    <header class="header">
-        <a href="index.html">
-          <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
-        </a>
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li><a class="main-nav-link" href="index.html">Home</a></li>
-            <li>
-              <a
-                class="main-nav-link"
-                href="Additionals pages/Recipes/recipes.html"
-                >Recipes</a
+      .container-main-hello {
+        /* border: 3px solid black; */
+        height: 100vh;
+        background-image: url("assets/about-us-img.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin-bottom: 10rem;
+      }
+
+      .container-main-hello::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+        z-index: 1;
+      }
+
+      .container-main-hello::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(assets/about-us-img.jpg); /* Update the path to your image */
+        z-index: 0;
+        opacity: 0.5; /* Adjust the opacity of the background image as needed */
+      }
+
+      .container-main-hello header,
+      .container-main-hello a,
+      .container-main-hello ul,
+      .container-main-hello li,
+      .container-main-hello h1,
+      .container-main-hello p,
+      .container-main-hello button {
+        position: relative;
+        z-index: 2;
+      }
+
+      .title-goodbye {
+        margin-top: 30rem;
+        margin-left: 30rem;
+      }
+
+      .bye-food {
+        color: white !important;
+
+        font-size: 5rem;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+      }
+
+      .btn-bye {
+        display: inline-block;
+        padding: 1.5rem 3rem;
+        border: none;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: #f18322;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        cursor: pointer;
+
+        transition: all 0.5s;
+      }
+
+      .btn-bye2 {
+        padding: 1.5rem 3rem;
+        border: none;
+        border-radius: 20px;
+        margin-right: 20px;
+        background-color: transparent;
+        border: 1px solid #f18322;
+        color: #f18322;
+        font-size: 1.6rem;
+        text-decoration: none;
+        cursor: pointer;
+
+        transition: all 0.5s;
+      }
+
+      .btn-bye:hover {
+        background-color: transparent;
+        border: 1px solid #f18322;
+        color: #f18322;
+      }
+
+      .btn-bye2:hover {
+        color: white;
+        background-color: #f18322;
+      }
+
+      .fast-food-h1 {
+        color: #555555;
+        font-weight: 200;
+        text-align: center;
+        font-size: 3.2rem;
+        font-family: "Lato", sans-serif;
+        border-bottom-width: 50%;
+        margin-bottom: 4rem;
+      }
+
+      .fast-food-p {
+        font-size: 2rem;
+        line-height: 29px;
+        color: #555555;
+        /* font-weight: 400; */
+        /* color: rgb(31, 31, 31); */
+        font-family: "Lato", sans-serif;
+      }
+
+      .img-grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* border: 3px solid black; */
+        height: 60rem;
+      }
+
+      .img-grid-cont {
+        width: 100%;
+        overflow: hidden;
+        /* border: 1px solid black; */
+      }
+      .img-grid {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: all 0.4s;
+      }
+
+      .img-grid:hover {
+        scale: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <div class="container-main-hello">
+        <header class="header">
+          <a href="index.html">
+            <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav-list">
+              <li><a class="main-nav-link" href="index.html">Home</a></li>
+              <li>
+                <a
+                  class="main-nav-link"
+                  href="Additionals pages/Recipes/recipes.html"
+                  >Recipes</a
+                >
+              </li>
+
+              <li><a class="main-nav-link" href="aboutUs.html">About us</a></li>
+              <li
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 30px;
+                "
               >
-            </li>
-            
-            <li><a class="main-nav-link" href="/aboutUs.html">About us</a></li>
-            <li><a class="main-nav-link nav-cta" href="/signIn.html">Sign in</a></li>
-          </ul>
-        </nav>
-  
-        <button class="btn-mobile-nav">
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-        </button>
-      </header>
+                <a
+                  class="main-nav-link"
+                  href="menuCart.html"
+                  style="font-size: 30px; color: black"
+                >
+                  <ion-icon name="bag-outline"></ion-icon>
+                </a>
 
+                <a class="main-nav-link nav-cta" href="signIn.html">Sign in</a>
+              </li>
+            </ul>
+          </nav>
 
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
+        </header>
 
-<body>
-    <div class="container">
-    <div class="container-header-aboutus">
-        <h1 class="header-primary-aboutus">Welcome to Omnifood</h1>
-    </div>
-    <div class="container-video-aboutus">
-        <video src="Video/OmniFood_V1.mp4" id="video-aboutus" controls ></video>
-    </div>
-
-    <div class="container-main-aboutus">
-        <h2 class="h2-aboutus">Welcome to Our Healthy Meal Delivery Service!</h2>
-    </div>
-    <div class="container-main-aboutis-last-section">
-      <div class="who-we-are">
-        <h1 class="who-we-are-header">WHO WE ARE</h1>
-        <p class="fadeIn fadein-who-we-are">We tailor our meals to your personal tastes and nutritional needs.</p>
-        <p class="fadeIn fadein-who-we-are">With a track record of delivering over 250,000 meals last year, we are committed to providing delicious and nutritious meals that make it easy for you to maintain a healthy lifestyle.</p>
+        <div class="container-header-aboutus" style="display: none">
+          <h1 class="header-primary-aboutus">Welcome to Omnifood</h1>
         </div>
-      <div class="our--target">
-        <h1 class="who-we-are-header">OUR TARGET</h1>
-        <p class="fadeIn fadein-who-we-are">Whether you have specific dietary preferences, food allergies, or health goals, we've got you covered. Our subscription service allows you to customize your meal plan based on your individual needs. </p>
-        <p class="fadeIn fadein-who-we-are">With our convenient meal delivery service, you can say goodbye to meal planning, grocery shopping, and cooking. </p>
+        <div class="title-goodbye">
+          <p class="bye-food">GOODBYE TO JUNK FOOD.</p>
+          <p class="bye-food">HELLO SUPER HEALTHY MEALS.</p>
+          <a href="Additionals pages/Recipes/recipes.html" class="btn-bye"
+            >I'm hungry</a
+          >
+          <a href="#fast-food-section" class="btn-bye2">Show me more</a>
         </div>
-    </div>
-        
-       
-    <div class="container-services">
-      <h1 class="serivces-header">Our services</h1>
-
-      <div class="services-list">
-        <div class="serivecs-div">
-          <i class="fas fa-plus services-icon"></i><a href="#" class="services-a">Healthy Food</a>
-        </div>
-        <div class="serivecs-div">
-          <i class="fas fa-plus services-icon"></i><a href="#" class="services-a">24/7 Delivery</a>
-        </div>
-        <div class="serivecs-div">
-          <i class="fas fa-plus services-icon"></i><a href="#" class="services-a">365-days-per-year</a>
-        </div>
-        <div class="serivecs-div">
-          <i class="fas fa-plus services-icon"></i><a href="#" class="services-a">tailored to your personal tastes</a>
-        </div>
-        
-        
       </div>
 
-    </div>
+      <div class="container">
+        <h1 class="fast-food-h1" id="fast-food-section">
+          GET FOOD FAST — NOT FAST FOOD
+        </h1>
+        <p class="fast-food-p">
+          Hello, we’re Omnifood, your new premium food delivery service. We know
+          you’re always busy. No time for cooking. So let us take care of that,
+          we’re really good at it, we promise!
+        </p>
 
-    </div>
-</main>
-    
+        <div class="container-video-aboutus">
+          <video
+            src="Video/OmniFood_V1.mp4"
+            id="video-aboutus"
+            controls
+          ></video>
+        </div>
 
+        <div class="container-main-aboutus">
+          <h2 class="h2-aboutus">
+            Welcome to Our Healthy Meal Delivery Service!
+          </h2>
+        </div>
 
+        <div class="img-grid-container" style="margin-top: 40px">
+          <div class="img-grid-cont">
+            <!-- <div class="img-overlay"></div> -->
+            <img src="assets/aboutus-1.jpg" alt="" class="img-grid" />
+          </div>
+          <div class="img-grid-cont">
+            <img src="assets/aboutus-2.jpg" alt="" class="img-grid" />
+          </div>
+          <div class="img-grid-cont">
+            <img src="assets/aboutus-3.jpg" alt="" class="img-grid" />
+          </div>
+          <div class="img-grid-cont">
+            <img
+              src="assets/aboutus-4.jpg"
+              alt=""
+              class="img-grid"
+              style="height: 300px !important"
+            />
+          </div>
+          <div class="img-grid-cont">
+            <img
+              src="assets/aboutus-5.jpg"
+              alt=""
+              class="img-grid"
+              style="height: 300px !important"
+            />
+          </div>
+          <div class="img-grid-cont">
+            <img
+              src="assets/aboutus-6.jpg"
+              alt=""
+              class="img-grid"
+              style="height: 300px !important"
+            />
+          </div>
+        </div>
 
+        <div
+          class="container-main-aboutis-last-section"
+          style="margin-top: 140px"
+        >
+          <div class="who-we-are">
+            <h1 class="who-we-are-header">WHO WE ARE</h1>
+            <p class="fadeIn fadein-who-we-are">
+              We tailor our meals to your personal tastes and nutritional needs.
+            </p>
+            <p class="fadeIn fadein-who-we-are">
+              With a track record of delivering over 250,000 meals last year, we
+              are committed to providing delicious and nutritious meals that
+              make it easy for you to maintain a healthy lifestyle.
+            </p>
+          </div>
+          <div class="our--target">
+            <h1 class="who-we-are-header">OUR TARGET</h1>
+            <p class="fadeIn fadein-who-we-are">
+              Whether you have specific dietary preferences, food allergies, or
+              health goals, we've got you covered. Our subscription service
+              allows you to customize your meal plan based on your individual
+              needs.
+            </p>
+            <p class="fadeIn fadein-who-we-are">
+              With our convenient meal delivery service, you can say goodbye to
+              meal planning, grocery shopping, and cooking.
+            </p>
+          </div>
+        </div>
 
-    <footer class="footer">
+        <div class="container-services">
+          <h1 class="serivces-header">Our services</h1>
+
+          <div class="services-list">
+            <div class="serivecs-div">
+              <i class="fas fa-plus services-icon"></i
+              ><a href="#" class="services-a">Healthy Food</a>
+            </div>
+            <div class="serivecs-div">
+              <i class="fas fa-plus services-icon"></i
+              ><a href="#" class="services-a">24/7 Delivery</a>
+            </div>
+            <div class="serivecs-div">
+              <i class="fas fa-plus services-icon"></i
+              ><a href="#" class="services-a">365-days-per-year</a>
+            </div>
+            <div class="serivecs-div">
+              <i class="fas fa-plus services-icon"></i
+              ><a href="#" class="services-a"
+                >tailored to your personal tastes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
         <div class="container grid grid--footer">
           <div class="logo-col">
             <a href="#" class="footer-logo">
-              <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+              <img
+                class="logo"
+                alt="Omnifood logo"
+                src="img/omnifood-logo.png"
+              />
             </a>
-  
+
             <ul class="social-links">
               <li>
                 <a class="footer-link" href="#"
-                  ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                  ><ion-icon
+                    class="social-icon"
+                    name="logo-instagram"
+                  ></ion-icon
                 ></a>
               </li>
               <li>
@@ -279,7 +524,7 @@ body{
                 ></a>
               </li>
             </ul>
-  
+
             <p class="copyright">
               copyright &copy; <span class="year">2023 </span> by Omnifood, Inc.
               All right reserved.
@@ -327,68 +572,84 @@ body{
             </ul>
           </nav>
         </div>
-      </footer>   
+      </footer>
+
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
 
       <script>
-// Get the elements for the "Our services" section and the target element
-const servicesHeader = document.querySelector('.serivces-header');
-const targetElement = document.querySelector('.services-a');
+        // Get the elements for the "Our services" section and the target element
+        const servicesHeader = document.querySelector(".serivces-header");
+        const targetElement = document.querySelector(".services-a");
 
-// Options for the Intersection Observer
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0 // Set threshold to 0 to trigger intersection immediately
-};
+        // Options for the Intersection Observer
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0, // Set threshold to 0 to trigger intersection immediately
+        };
 
-// Callback function for the Intersection Observer
-function handleIntersection(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      startColorAnimation();
-    } else {
-      stopColorAnimation();
-    }
-  });
-}
+        // Callback function for the Intersection Observer
+        function handleIntersection(entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startColorAnimation();
+            } else {
+              stopColorAnimation();
+            }
+          });
+        }
 
-// Create a new Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, options);
+        // Create a new Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, options);
 
-// Observe the services header element
-observer.observe(servicesHeader);
+        // Observe the services header element
+        observer.observe(servicesHeader);
 
-// Calculate the progress percentage of the scroll
-function calculateProgress() {
-  const windowHeight = window.innerHeight;
-  const targetRect = targetElement.getBoundingClientRect();
-  const targetPosition = targetRect.top - windowHeight;
-  const progress = Math.max(0, Math.min(1, -targetPosition / windowHeight));
-  return progress;
-}
+        // Calculate the progress percentage of the scroll
+        function calculateProgress() {
+          const windowHeight = window.innerHeight;
+          const targetRect = targetElement.getBoundingClientRect();
+          const targetPosition = targetRect.top - windowHeight;
+          const progress = Math.max(
+            0,
+            Math.min(1, -targetPosition / windowHeight)
+          );
+          return progress;
+        }
 
-// Start the color animation
-function startColorAnimation() {
-  document.body.classList.add('color-animation');
-  updateBackgroundColor();
-}
+        // Start the color animation
+        function startColorAnimation() {
+          document.body.classList.add("color-animation");
+          updateBackgroundColor();
+        }
 
-// Stop the color animation
-function stopColorAnimation() {
-  document.body.classList.remove('color-animation');
-}
+        // Stop the color animation
+        function stopColorAnimation() {
+          document.body.classList.remove("color-animation");
+        }
 
-// Update the background color based on scroll progress
-function updateBackgroundColor() {
-  const progress = calculateProgress();
-  const color = `rgba(128, 128, 128, ${progress})`;
-  document.body.style.backgroundColor = color;
-}
+        // Update the background color based on scroll progress
+        function updateBackgroundColor() {
+          const progress = calculateProgress();
+          const color = `rgba(128, 128, 128, ${progress})`;
+          document.body.style.backgroundColor = color;
+        }
 
-// Listen for scroll events and update the background color
-window.addEventListener('scroll', updateBackgroundColor);
+        // Listen for scroll events and update the background color
+        window.addEventListener("scroll", updateBackgroundColor);
 
+        //ripple effect
 
+        var app = new PIXI.Application(window.innerWidth, window.innerHeight);
+        document.body.appendChild(app.view);
       </script>
-
-</body>
+    </body>
+  </body>
+</html>

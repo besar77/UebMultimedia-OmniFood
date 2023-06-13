@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script defer src="js/script.js"></script>
+
+    <title>Omnifood</title>
+    <style>
+      body {
+        background-color: #fdf2e9;
+      }
+
+      .container-porosia {
+        margin: 0 35rem;
+
+        margin-top: 10rem;
+      }
+
+      .order-header {
+        text-align: center;
+        font-size: 4.2rem;
+        color: #e67e22;
+        font-weight: 500;
+      }
+
+      .order-location1 {
+        text-align: center;
+        color: black;
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 2.2rem;
+      }
+
+      .order-location2 {
+        text-align: center;
+        color: rgb(138, 135, 135);
+        margin-top: 1rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+      }
+
+      .span-order {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .order {
+        /* border: 1px solid black; */
+        border-bottom: 1px solid #e7e3de;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+        height: 20rem;
+        display: grid;
+        grid-template-columns: 2fr 4fr 1fr;
+      }
+
+      .container-imazh {
+        width: 300px;
+        background-color: #fcf5ef;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img-width-order {
+        /* background-color: white; */
+        width: 70%;
+        height: 70%;
+      }
+      .container-arrows {
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: end;
+        margin-left: 30px;
+        margin-bottom: 25px;
+      }
+
+      .icon {
+        font-size: 2.5rem;
+        color: black;
+        cursor: pointer;
+      }
+
+      .number {
+        font-size: 2.5rem;
+        color: black;
+        margin-right: 30px;
+        margin-left: 30px;
+        background-color: white;
+        padding: 0 20px;
+      }
+
+      .order-qmimi-continer {
+        display: flex;
+        align-items: end;
+        margin-bottom: 25px;
+        font-size: 2em;
+        color: black;
+        font-weight: 600;
+      }
+
+      .oder-name {
+        font-size: 2rem;
+        color: rgb(44, 44, 44);
+        font-weight: 500;
+        transform: translateY(45px);
+        margin-left: 40px;
+      }
+
+      .icon-close {
+        font-size: 2rem;
+        transform: translateX(910px);
+        cursor: pointer;
+        color: black;
+
+        /* padding-top: 20px; */
+      }
+
+      .order-porosia {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-order-porosia {
+        border: none;
+        background-color: #e67e22;
+        padding: 10px;
+        width: 50%;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.2);
+
+        transition: all 0.5s;
+      }
+
+      .btn-order-porosia:hover {
+        background-color: #c0691c;
+      }
+
+      .order-total {
+        font-size: 2rem;
+        color: black;
+      }
+
+      .custom-icon {
+        stroke: white;
+      }
+
+      /* Center the loader */
+      .loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: #fdf2e9; /* Set the background color to match your page */
+      }
+
+      /* Loader style */
+      .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid orange; /* Orange */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      /* Animation */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Hide the loader after 2 seconds */
+      .content {
+        display: none;
+      }
+    </style>
+
+    <script>
+      // Hide the loader and show the content after 2 seconds
+      setTimeout(function () {
+        document.querySelector(".loader-container").style.display = "none";
+        document.querySelector(".content").style.display = "block";
+      }, 2000);
+    </script>
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="content">
+      <header class="header">
+        <a href="index.html" class="logo-hover">
+          <img
+            class="logo logo-hover"
+            alt="Omnifood logo"
+            src="img/omnifood-logo.png"
+          />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="index.html">Home</a></li>
+            <li>
+              <a
+                class="main-nav-link"
+                href="Additionals pages/Recipes/recipes.html"
+                >Recipes</a
+              >
+            </li>
+            <li>
+              <a class="main-nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li><a class="main-nav-link" href="aboutUs.html">About us</a></li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+              "
+            >
+              <a
+                class="main-nav-link"
+                href="#"
+                style="font-size: 30px; color: black"
+              >
+                <ion-icon name="bag-outline"></ion-icon>
+              </a>
+
+              <a class="main-nav-link nav-cta" href="signIn.html">Sign in</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </header>
+
+      <div class="container-porosia">
+        <h1 class="order-header">YOUR ORDER</h1>
+        <p class="order-location1">OMNIFOOD - KOSOVO</p>
+        <p class="order-location2">24/7 Delivery</p>
+        <p class="order-location2">
+          Address:Prishtinë <span class="span-order">Change?</span>
+        </p>
+
+        <div class="order-full" style="margin-top: 40px">
+          <div class="ordername-closeicon">
+            <h1 class="oder-name">Beef and Broccoli</h1>
+            <i class="fas fa-times icon-close"></i>
+          </div>
+          <div class="order">
+            <div class="container-imazh">
+              <img src="assets/aboutus-1.jpg" class="img-width-order" alt="" />
+            </div>
+            <div class="container-arrows">
+              <i class="fas fa-arrow-up icon"></i>
+              <p class="number">1</p>
+              <i class="fas fa-arrow-down icon"></i>
+            </div>
+            <div class="order-qmimi-continer">
+              <p class="order-qmimi">60&euro;</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-full" style="margin-top: 40px">
+          <div class="ordername-closeicon">
+            <h1 class="oder-name">Beef and Broccoli</h1>
+            <i class="fas fa-times icon-close"></i>
+          </div>
+          <div class="order">
+            <div class="container-imazh">
+              <img src="assets/aboutus-2.jpg" class="img-width-order" alt="" />
+            </div>
+            <div class="container-arrows">
+              <i class="fas fa-arrow-up icon"></i>
+              <p class="number">1</p>
+              <i class="fas fa-arrow-down icon"></i>
+            </div>
+            <div class="order-qmimi-continer">
+              <p class="order-qmimi">78.99&euro;</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-full" style="margin-top: 40px">
+          <div class="ordername-closeicon">
+            <h1 class="oder-name">Beef and Broccoli</h1>
+            <i class="fas fa-times icon-close"></i>
+          </div>
+          <div class="order">
+            <div class="container-imazh">
+              <img src="assets/aboutus-3.jpg" class="img-width-order" alt="" />
+            </div>
+            <div class="container-arrows">
+              <i class="fas fa-arrow-up icon"></i>
+              <p class="number">1</p>
+              <i class="fas fa-arrow-down icon"></i>
+            </div>
+            <div class="order-qmimi-continer">
+              <p class="order-qmimi">110.4&euro;</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-full" style="margin-top: 40px">
+          <div class="ordername-closeicon">
+            <h1 class="oder-name">Beef and Broccoli</h1>
+            <i class="fas fa-times icon-close"></i>
+          </div>
+          <div class="order">
+            <div class="container-imazh">
+              <img src="assets/aboutus-4.jpg" class="img-width-order" alt="" />
+            </div>
+            <div class="container-arrows">
+              <i class="fas fa-arrow-up icon"></i>
+              <p class="number">1</p>
+              <i class="fas fa-arrow-down icon"></i>
+            </div>
+            <div class="order-qmimi-continer">
+              <p class="order-qmimi">150&euro;</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-porosia">
+          <button class="btn-order-porosia">Refresh cart</button>
+          <p class="order-total">Total: 369.39&euro;</p>
+          <button class="btn-order-porosia">Order</button>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
